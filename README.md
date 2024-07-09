@@ -1,5 +1,10 @@
-# assignment
+# Assignment
 Chaintech Network Assignment
+I have used the Streamlit and Django frameworks for completing the assignments.
+
+## Authors
+- [@Vivek2709](https://github.com/Vivek2709)
+
 
 ![Home Page](https://github.com/Vivek2709/assignment/assets/52660335/862b2d76-aa0f-4607-bb1c-b033b6bd6c72)
 ![Exercise - 2](https://github.com/Vivek2709/assignment/assets/52660335/4371c47b-a919-44d8-a170-3b7bb30766fa)
