@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Collect User Data</title>
+    <style>
+        body {
+            background-color: #DDD0C8;
+            color: #323232;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #323232;
+            border-radius: 10px;
+            background-color: #f2ede3;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input,
+        form button {
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #323232;
+            border-radius: 5px;
+        }
+
+        form button {
+            background-color: #323232;
+            color: #DDD0C8;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #444;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #323232;
+            color: #DDD0C8;
+            border-radius: 5px;
+            border: 2px solid #323232;
+            cursor: pointer;
+        }
+
+        .back-button a:hover {
+            background-color: #444;
+            border-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Collect User Data</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        <div class="back-button">
+            <a href="http://localhost:8501/">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>

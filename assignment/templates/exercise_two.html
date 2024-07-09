@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External API Data</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #DDD0C8;
+            color: #323232;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #FFFFFF;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #323232;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .user-info {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .user-info p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #323232;
+            color: #DDD0C8;
+            border-radius: 5px;
+            border: 2px solid #323232;
+            cursor: pointer;
+        }
+
+        .back-button a:hover {
+            background-color: #444;
+            border-color: #444;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Data from External API</h1>
+
+        {% if user_info %}
+        <div class="user-info">
+            <p><strong>Name:</strong> {{ user_info.name }}</p>
+            <p><strong>Email:</strong> {{ user_info.email }}</p>
+            <p><strong>Username:</strong> {{ user_info.username }}</p>
+            <p><strong>Gender:</strong> {{ user_info.sex }}</p>
+            <p><strong>Date of Birth:</strong> {{ user_info.birthday }}</p>
+            <p><strong>Address:</strong> {{ user_info.address }}</p>
+        </div>
+        {% elif error_message %}
+        <p class="error-message">{{ error_message }}</p>
+        {% else %}
+        <p>No data available.</p>
+        {% endif %}
+        <div class="back-button">
+            <a href="http://localhost:8501/">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
